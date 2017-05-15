@@ -1,0 +1,54 @@
+% document(<output name>): [proposal, report]
+document(myprop): report
+	% Output language: [en, th]
+	language: th
+
+	% Project name
+	name-th: ระบบควบคุมเครื่องใช้ไฟฟ้าในบ้านผ่านแอปพลิเคชั่น
+	name-en: Electronics Control System by Application
+
+	% Author names
+	author-th: นายตรีธนพงศ์ เอี่ยมรอด
+	author-en: Threetanaphong Iamrod
+	
+	% If more than one author, add more.
+	author-th: นายธนวัฒน์ พลชัย
+	author-en: Tanawat Ponchai
+
+	% Advisor (both Thai and English)
+	advisor-th: วัชรพัฐ เมตตานันท | degree: วศ.ม.	   % Advisor must have a degree
+	advisor-en: Vacharapat Mettanant | degree: M.Eng.
+
+	% Name of 1st and 2nd Committee (based on output language)
+	committee1-th: ปุณณะ ยศปัญญา    % | prefix: อ.ดร. % Custom prefix
+	committee2-th: วัลลภ อินทร์ฉ่ำ
+	% Name of head of department
+	headdepartment-th: วัชรพัฐ เมตตานันท
+
+	% Proposal Content
+	proposal: proposal.opus
+
+	% Thai language abstract
+	abstract-th: abstract_th.opus
+
+	% English language abstract
+	abstract-en: abstract_en.opus
+
+	% Acknowledgement
+	acknowledgement: acknowledgement.opus
+
+	% Contents. Separated by each chapter.
+	% chapter(<chapter title>): <file to the chapter>
+	chapter(บทนำ): ch1_introduction.opus
+	chapter(ความรู้พื้นฐานและงานที่เกี่ยวข้อง): ch2_related_work.opus
+	chapter(การพัฒนา): ch3_implementations.opus
+	chapter(ผลและวิจารณ์): ch4_results_and_discussion.opus
+	chapter(สรุป): ch5_conclusion.opus
+
+	% References file
+	reference: references.bib
+
+	% Appendices. Separated by each appendix.
+	% appendix(<appendix title>): <file to the appendix>
+	appendix(คู่มือการติดตั้งโปรแกรม): appendixA.opus
+	% appendix(คู่มือการใช้งานโปรแกรม): appendixB.opus

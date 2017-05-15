@@ -1,0 +1,4 @@
+*.pdf
+.DS_Store
+*.pyc
+*-ori.tex
