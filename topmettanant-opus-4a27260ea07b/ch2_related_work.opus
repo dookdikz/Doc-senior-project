@@ -12,6 +12,7 @@
 	ภาษาไพธอน(Python)เป็นภาษาโปรแกรมคอมพิวเตอร์ระดับสูงที่มีโครงสร้างของภาษาที่ไม่ซับซ้อนทำให้ง่ายต่อการเรียนรู้ และสามารถทำงานร่วมกับภาษาโปรแกรมอื่น ๆ ได้หลายภาษา และยังเป็นภาษาสคริปต์ (Scripting Language)ทำให้ใช้เวลาในการเขียนและคอมไพล์ไม่มาก นอกจากนี้ยังมีเฟรมเวิร์ค(Framework)ที่สามารถใช้สร้างเว็บเซอร์วิส(Web Service)ได้คือ Flask Framework
 	[[subsection: Flask Framework]]
 	Flask เป็นเฟรมเวิร์คหนึ่งของภาษาไพธอน ที่ช่วยให้เราสามารถเขียน python web application ได้ ซึ่งจุดเด่นของ Flask คือความเรียบง่ายและความยืดหยุ่น และเหมาะสำหรับแอพพลิ-เคชั่นที่ทำงานหน้าเดียว โดยจะมีตัวอย่างดังนี้ 
+	
 	\newpage
 
 
@@ -41,7 +42,7 @@ if __name__ == "__main__":
 
 
 [[subsection: ListView]]
-	เป็น ไลบรารี่(Library) ที่ช่วยจัดการในการแสดงข้อมูลที่เป็นลิสต์(List) ให้แสดงเป็นแถว(Row) ซึ่งแต่ละแถวจะมี layout ตามที่ออกแบบไว้ โดยมีตัวอย่างดังนี้
+	ListView เป็น ไลบรารี่(Library) ที่ช่วยจัดการในการแสดงข้อมูลที่เป็นลิสต์(List) ให้แสดงเป็นแถว(Row) ซึ่งแต่ละแถวจะมี layout ตามที่ออกแบบไว้ โดยมีตัวอย่างดังนี้
 
 โค้ดตัวอย่างของการจองพื้นนี้ให้ listview ในไฟล์ .xml
 [[code]]
@@ -87,7 +88,24 @@ public class listAdapter extends BaseAdapter {
  listView.setAdapter(listAdapter);
 [[end]]
 
+[[subsection: Android Voice Recognition]]
 
+    Android Voice Recognition คือการที่นำเสียงของผู้ใช้มาประมวลผล เพื่อทำให้รับรู้ได้ว่าผู้ใช้นั้นพูดคำว่าอะไร ซึ่งในระบบของแอนดรอยด์จะมีไลบรารี่ที่พํมนาโดย Google ซึ่งมีโค้ดตัวอย่างดังนี้
+[[code]]
+public class MainActivity extends Activity implements View.OnClickListener {
+    private final static int REQUEST_VOICE_RECOGNITION = 10001;
+
+    private void callVoiceRecognition() {
+        Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
+        startActivityForResult(intent, REQUEST_VOIC_RECOGINITION);
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);     
+    }
+}
+[[end]]
 
 [[section: iOS]]
 	ไอโอเอสเป็นระบบปฏิบัติการบนอุปกรณ์พกพาซึ่ง พัฒนาและจำหน่ายโดยบริษัทแอปเปิ้ล ซึ่งมี HomeKit เป็นแพลตฟอร์ม(Platform)หนึ่งของระบบปฏิบัติการไอโอเอส เพื่อใช้ในการสื่อสารและควบคุมอุปกรณ์ไฟฟ้าภายในบ้านผ่าน Siri โดยใช้โปรโตคอล(Protocol)ชื่อว่า HomeKit Accessory Protocol ซึ่งเป็นโปรโตคอลเฉพาะที่ใช้ในการสื่อสารกับเว็บเซอร์วิสที่สพัฒนาจาก Node JSซึ่งเป็นแพลตฟอร์มของภาษาจาวาสคริป(JavaScript)
@@ -95,7 +113,7 @@ public class listAdapter extends BaseAdapter {
 
 
 [[section: Firebase Realtime Database ]]
-	เป็น NoSQL Cloud Database ที่เก็บข้อมูลในภาพแบบของเจสัน(JSON) และมีการ sync ข้อมูลแบบ real time กับทุกอุปกรณ์ที่เชื่อมต่อแบบอัตโนมัติในเสี้ยววินาที นอกจากนี้ยังมีระบบ Authentication ให้ใช้งานได้ง่ายมากขึ้น [[cite(Firebase)]] ซึ่งมีโครงสร้างดังภาพที่ 2.1 และมีตัวอย่างการใช้งานใน Android Studio ดังนี้
+	เป็น NoSQL Cloud Database ที่เก็บข้อมูลในรูปแบบของเจสัน(JSON) และมีการ sync ข้อมูลแบบ real time กับทุกอุปกรณ์ที่เชื่อมต่อแบบอัตโนมัติในเสี้ยววินาที นอกจากนี้ยังมีระบบ Authentication ให้ใช้งานได้ง่ายมากขึ้น [[cite(Firebase)]] ซึ่งมีโครงสร้างดังภาพที่ 2.1 และมีตัวอย่างการใช้งานใน Android Studio ดังนี้
 
 	โค้ดในส่วนของการอ่านข้อมูลจาก firebase เข้าแอพพลิเคชัน
 [[code]]

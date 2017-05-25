@@ -1,113 +1,31 @@
 [[section : Android]]
 [[list]]
 #นำ ElecControl.apk ไปไว้ในเครื่องโทรศัพท์ที่เป็นระบบปฏิบัติการ Android ดังภาพที่ A.1
+
+
 #เมื่อขึ้นหน้าต่างดังภาพ A.2 แล้วกด install
+
+
 #สามารถใช้งานได้ ดังภาพ A.3
 
 [[end]]
 
+[[image(and1):and1.png|width=0.25|caption=ElecControl.apk]]
+\newpage
+[[image(and2):and2.png|width=0.25|caption=install ElecControl]]
+[[image(and3):and3.jpg|width=0.25|caption=Success install]]
+\newpage
 [[section : IOS]]
 [[ulist]]
 #Download application iDevices จาก App Store หรือ จะใช้  Apple Homekit  
 [[end]]
 [[section : Raspberry Pi3]]
 [[subsection: install npm]]
-สามารถดูเพิ่มเติมได้ที่ [[cite(HomeKit)]]
-[[subsubsection:ขั้นตอนที่ 1: ติดตั้ง Jessie]]
-	
-		Jessie OS 
-		
-[[subsubsection:ขั้นตอนที่ 2: Boot  Raspberry PI3 ด้วย Jessie.]]
-		
-		Username pi
-		Password raspberry
-		
-[[subsubsection:ขั้นตอนที่ 3: อัปเดต apt-get]]
-		
-		sudo apt-get update \&\& sudo apt-get upgrade -y
-		
-[[subsubsection:ขั้นตอนที่ 4: เพิ่มสิทธิผู้ใช้งาน ]]
-		
-		sudo su
-		
-[[subsubsection:ขั้นตอนที่ 5: ติดตั้ง python]]
+สามารถดูการติดตั้งได้ที่ [[cite(HomeKit)]]
 
-		sudo Install python-dev and python-pip
-
-		sudo apt-get install python-dev python-pip
-
-[[subsubsection:ขั้นตอนที่ 6: ติดตั้ง  libavahi and libdnssd]]
-
-apt-get install libavahi-compat-libdnssd-dev
-[[subsubsection:ขั้นตอนที่ 7: ดาวน์โหลดและติดตั้ง NodeJS]]
-
-wget http://node-arm.herokuapp.com/node_latest_armhf.d...
-
-dpkg -i node_latest_armhf.deb
-
-[[subsubsection:ขั้นตอนที่ 8: ตรวจสอบเวอร์ชั่นของ   node และ npm ]]
-
-node -v
-
-npm -v
-
-[[subsubsection:ขั้นตอนที่ 9: Clone Homekit Bridge จาก github และเอาเข้าไปใส่ในโฟร์เดอร์ HAP-NodeJS]]
-
-git clone https://github.com/KhaosT/HAP-NodeJS.git
-
-[[subsubsection:ขั้นตอนที่ 10: ติดตั้งคำสั่งต่างๆ ]]
-
-npm install -g node-gyp
-
-npm install node-persist 
- 
- npm install srp 
- 
- npm install mdns 
- 
- npm install ed25519 
- 
- npm install curve25519 
- 
- npm install debug 
- 
- npm install python-shell
-
-npm rebuild
-
-[[subsubsection:ขั้นตอนที่ 11:  Restart เครื่อง ]]
 
 [[subsection: install lirc ]]
-สามารถดูเพิ่มเติมได้ที่ [[cite(LIRC)]]
-[[subsubsection:ขั้นตอนที่ 1: ติดตั้ง LIRC]]
-
-sudo apt-get install lirc
-
-[[subsubsection:ขั้นตอนที่ 2: set pin ของ Raspberry Pi]]
-เข้าไปใน path /etc/modules
-แก้ไขตามภาพที่ A.4
-
-[[subsubsection:ขั้นตอนที่ 3: แก้ไขไฟล์ hardware.conf]]
-เข้าไปใน path /etc/lirc/hardware.conf
-แก้ไขตามภาพที่ A.5
-
-[[subsubsection:ขั้นตอนที่ 3: แก้ไขไฟล์ config.txt]]
-เข้าไปใน path /boot/config.txt
-แก้ไขตามภาพที่ A.6
-
-[[subsection: นำไฟล์จากแผ่นมาใส่ใน Raspberry Pi]]
-
-[[subsubsection:ขั้นตอนที่ 1: นำไฟล์ใน accessories มาใส่]]
-นำไฟล์มาใส่ใน path ตามภาพที่ A.7
-
-[[subsubsection:ขั้นตอนที่ 2: นำไฟล์ใน air2 มาใส่]]
-นำไฟล์มาใส่ใน path ตามภาพที่ A.8
-
-[[subsubsection:ขั้นตอนที่ 2: นำไฟล์ใน lircd.conf มาใส่]]
-นำไฟล์มาใส่ใน path ตามภาพที่ A.9
-
-[[subsubsection:ขั้นตอนที่ 2: นำไฟล์ใน I/O Control มาใส่]]
-นำไฟล์มาใส่ใน path ตามภาพที่ A.10
+สามารถดูการติดตั้งได้ที่ [[cite(LIRC)]]
 
 [[subsubsection:ขั้นตอนที่ 2: run Core.js ]]
 
@@ -115,23 +33,12 @@ sudo apt-get install lirc
 
 sudo node Core.js 
 
-ตามภาพที่ A.11
+ตามภาพที่ A.4
+
+[[image(cd5):cd5.png|width=0.9|caption=Core.js]]
+
 
 [[subsubsection:ขั้นตอนที่ 2: run web service]]
-เปิดไฟล์ web android.py ด้วย python ver.3.5 แล้วกด run ตามภาพที่ A.12
+เปิดไฟล์ web android.py ด้วย python ver.3.5 แล้วกด run ตามภาพที่ A.5
 
-[[image(and1):and1.png|width=0.3|caption=ElecControl.apk]]
-[[image(and2):and2.png|width=0.3|caption=install ElecControl]]
-[[image(and3):and3.jpg|width=0.3|caption=Success install]]
-
-
-[[image(lirc1):lirc1.png|width=0.8|caption=set pin ]]
-[[image(lirc2):lirc2.png|width=0.8|caption=hardware.conf]]
-[[image(lirc3):lirc3.png|width=0.8|caption=config.txt]]
-
-[[image(cd1):cd1.png|width=0.9|caption=accessories]]
-[[image(cd2):cd2.png|width=0.9|caption=Temperature Air]]
-[[image(cd3):cd3.png|width=0.9|caption=LIRC]]
-[[image(cd4):cd4.png|width=0.9|caption=I/O Control]]
-[[image(cd5):cd5.png|width=0.9|caption=Core.js]]
 [[image(cd6):cd6.png|width=0.9|caption=web android.py]]
