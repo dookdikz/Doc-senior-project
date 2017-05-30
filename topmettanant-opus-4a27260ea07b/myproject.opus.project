@@ -5,7 +5,7 @@ document(myprop): report
 
 	% Project name
 	name-th: ระบบควบคุมเครื่องใช้ไฟฟ้าในบ้านผ่านแอปพลิเคชั่น
-	name-en: Electronics Control System by Application
+	name-en:  Home Appliance Control System Using Mobile Applications
 
 	% Author names
 	author-th: นายตรีธนพงศ์ เอี่ยมรอด
